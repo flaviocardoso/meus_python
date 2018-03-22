@@ -21,5 +21,8 @@ else:
 
     i = 0
     while c_negocio > i:
+        #cont = list(data['model'][i].values())
+        #cont[1] = cont[1].replace("T", " ")
+        data['model'][i]['dataHora'] = data['model'][i]['dataHora'].replace("T", " ")
         output.writerow(data['model'][i].values())
         i = i + 1
