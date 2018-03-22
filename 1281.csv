@@ -1,0 +1,5 @@
+negocioId,dataHora,quantidade,preco,quantidadeMedia,precoEfetivo,valorNegocio,produtoId,tendencia,tendenciaNegocio,mesmaEmpresa,cancelado
+103603,2018-03-09T15:43:24,8760.0,212.0,1.0,212.0,1857120.0,1281,+,C,False,False
+103561,2018-03-09T11:10:14,8760.0,210.0,1.0,210.0,1839600.0,1281,+,C,False,False
+101052,2018-02-21T14:44:00,8760.0,195.0,1.0,195.0,1708200.0,1281,,C,False,False
+86679,2018-01-11T16:18:09,8760.0,170.0,1.0,170.0,1489200.0,1281,,,False,False
