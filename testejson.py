@@ -1,5 +1,7 @@
 #!/usr/bin/env python
-import urllib.request, json, csv
+import urllib.request, json, csv, time
+
+init = time.time()
 
 with urllib.request.urlopen("http://api.bbce.com.br/produto/todos") as url:
     data = json.loads(url.read().decode())
@@ -7,7 +9,7 @@ with urllib.request.urlopen("http://api.bbce.com.br/produto/todos") as url:
 
 #lista = list(data[["id"]])
 c_data = len(data)
-id = 1281
+#id = 1281
 '''
 for x in data :
     if x['id']==id:
@@ -19,20 +21,21 @@ for x in data :
             for value in x['campos'][i].values():
                 print("{0} ".format(value), end="")
             print()'''
-output = csv.writer(open("teste_id_desc.csv", "w"))
+#output = csv.writer(open("teste_id_desc.csv", "w"))
 #output.writerow(data[0].keys())
 #for row in data[0]:
-ent_headers = data[0]
-keys = list(ent_headers.keys())
+#ent_headers = data[0]
+#keys = list(ent_headers.keys())
 #values = ent.values()
-output.writerow((keys[0], keys[1]))
+#output.writerow((keys[0], keys[1]))
 """for key in keys:
     print("{0} ".format(key), end="")
     output.writerow(keys)"""
 i = 0
 while c_data > i:
-    cont = list(data[i].values())
-    output.writerow((cont[0], cont[1]))
+    #cont = list(data[i].values())
+    #output.writerow((cont[0], cont[1]))
+    print(data[i]['id'], data[i]['descricao'])
     i = i + 1
 """output.writerow(data[:].values())"""
 """for i in range(c_data):
@@ -44,3 +47,5 @@ while c_data > i:
         print(row)
         output.writerow(row)
         """
+fim = time.time()
+print("{0}".format(fim - init))
